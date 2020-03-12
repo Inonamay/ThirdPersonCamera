@@ -163,6 +163,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 290725347, guid: aecc79441d05be340942f8fcb409d54b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 290725349, guid: aecc79441d05be340942f8fcb409d54b, type: 3}
       propertyPath: spells.Array.size
       value: 5
@@ -193,6 +197,11 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 481453676918730549, guid: aecc79441d05be340942f8fcb409d54b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 686556555493018370, guid: aecc79441d05be340942f8fcb409d54b,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -207,6 +216,11 @@ PrefabInstance:
         type: 3}
       propertyPath: near clip plane
       value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 686556555493018375, guid: aecc79441d05be340942f8fcb409d54b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 686556555888866736, guid: aecc79441d05be340942f8fcb409d54b,
         type: 3}
@@ -232,6 +246,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 686556555888866739, guid: aecc79441d05be340942f8fcb409d54b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 686556555888866748, guid: aecc79441d05be340942f8fcb409d54b,
         type: 3}
@@ -293,6 +312,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3215793299247484258, guid: aecc79441d05be340942f8fcb409d54b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6460241646958856610, guid: aecc79441d05be340942f8fcb409d54b,
         type: 3}
       propertyPath: zoominAmount
@@ -326,7 +350,7 @@ PrefabInstance:
     - target: {fileID: 6460241646958856610, guid: aecc79441d05be340942f8fcb409d54b,
         type: 3}
       propertyPath: BlockingCameraLayers.m_Bits
-      value: 4294967295
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 6460241646958856610, guid: aecc79441d05be340942f8fcb409d54b,
         type: 3}

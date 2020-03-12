@@ -13,6 +13,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] float minDistanceToPlayerAllowed = 2;
     [SerializeField] LayerMask BlockingCameraLayers;
     public bool invertedControls;
+    public bool cameraSmoothing = true;
     float cameraOffset;
     float cameraRotationLeftRight;
     float cameraRotationUpDown;
@@ -92,8 +93,18 @@ public class CameraController : MonoBehaviour
         cameraRotationUpDown = Mathf.Clamp(cameraRotationUpDown, minRotateDegrees, maxRotateDegrees);
 
         //sets the rotation of the player and the pivotpoint
-        transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, cameraRotationLeftRight, 0), Time.deltaTime * cameraSpeed);
-        cameraPivotPoint.localRotation = Quaternion.Lerp(cameraPivotPoint.localRotation, Quaternion.Euler(cameraRotationUpDown, 0, 0), Time.deltaTime * cameraSpeed);
+        if (cameraSmoothing)
+        {
+            transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, cameraRotationLeftRight, 0), Time.deltaTime * cameraSpeed);
+            cameraPivotPoint.localRotation = Quaternion.Lerp(cameraPivotPoint.localRotation, Quaternion.Euler(cameraRotationUpDown, 0, 0), Time.deltaTime * cameraSpeed);
+
+        }
+        else
+        {
+            transform.localRotation = Quaternion.Euler(0, cameraRotationLeftRight, 0);
+            cameraPivotPoint.localRotation = Quaternion.Euler(cameraRotationUpDown, 0, 0);
+
+        }
 
     }
     void MoveCamera()
